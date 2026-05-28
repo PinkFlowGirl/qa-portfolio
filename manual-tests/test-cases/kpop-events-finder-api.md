@@ -20,9 +20,9 @@
 ## POST /api/v1/auth/register
 | ID | Cenário | Passos | Resultado Esperado | Status |
 |---|---|---|---|---|
-| TC-004 | Registro com sucesso | POST com nome, email e senha válidos | 201 Created | 🔲 A executar |
-| TC-005 | Email já cadastrado | POST com email já existente | 409 Conflict | 🔲 A executar |
-| TC-006 | Campos obrigatórios em branco | POST sem body | 400 Bad Request | 🔲 A executar |
+| TC-004 | Registro com sucesso | 201 + id, name, email, createdAt, updatedAt, token | ✅ Pass |
+| TC-005 | Email já cadastrado | 409 Conflict | ✅ Pass |
+| TC-006 | Campos obrigatórios em branco | 400 + mensagem explicativa | ✅ Pass |
 
 ---
 
