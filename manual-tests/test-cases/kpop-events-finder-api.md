@@ -13,7 +13,7 @@
 |---|---|---|---|---|
 | TC-001 | Health check com sucesso | GET /health | 200 + body com status "ok" | ✅ Pass |
 | TC-002 | Endpoint com typo | GET /healt | 404 Not Found | ✅ Pass |
-| TC-003 | Método errado | POST /health | 405 Method Not Allowed | 🔲 A executar |
+| TC-003 | Método errado | POST /health | 405 Method Not Allowed | ⚠️ Retornou 404 — ponto de atenção para o time |
 
 ---
 
