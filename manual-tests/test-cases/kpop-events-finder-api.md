@@ -29,31 +29,33 @@
 ## POST /api/v1/auth/login
 | ID | Cenário | Passos | Resultado Esperado | Status |
 |---|---|---|---|---|
-| TC-007 | Login com sucesso | POST com email e senha válidos | 200 + token JWT | 🔲 A executar |
-| TC-008 | Senha incorreta | POST com senha errada | 401 Unauthorized | 🔲 A executar |
-| TC-009 | Email não cadastrado | POST com email inexistente | 401 Unauthorized | 🔲 A executar |
+| TC-007 | Login com sucesso | POST com email e senha válidos | 200 + token JWT | ✅ Pass  |
+| TC-008 | Senha incorreta | POST com senha errada | 401 Unauthorized | ✅ Pass  |
+| TC-009 | Email não cadastrado | POST com email inexistente | 401 Unauthorized | ✅ Pass  |
 
 ---
 
 ## GET /api/v1/auth/me
 | ID | Cenário | Passos | Resultado Esperado | Status |
 |---|---|---|---|---|
-| TC-010 | Buscar perfil autenticado | GET com token válido | 200 + dados do usuário | 🔲 A executar |
-| TC-011 | Buscar perfil sem token | GET sem token | 401 Unauthorized | 🔲 A executar |
+| TC-010 | Buscar perfil autenticado | GET com token válido | 200 + dados do usuário | ✅ Pass  |
+| TC-011 | Buscar perfil sem token | GET sem token | 401 Unauthorized | ✅ Pass |
 
 ---
 
 ## POST /api/v1/events
 | ID | Cenário | Passos | Resultado Esperado | Status |
 |---|---|---|---|---|
-| TC-012 | Criar evento com sucesso | POST com dados válidos e token | 201 Created | 🔲 A executar |
-| TC-013 | Criar evento sem autenticação | POST sem token | 401 Unauthorized | 🔲 A executar |
-| TC-014 | Criar evento sem campos obrigatórios | POST sem body | 400 Bad Request | 🔲 A executar |
+| TC-012 | Criar evento com sucesso | POST com dados válidos e token | 201 Created | ✅ Pass |
+| TC-013 | Criar evento sem autenticação | POST sem token | 401 Unauthorized | ✅ Pass |
+| TC-014 | Criar evento sem campos obrigatórios | POST sem body | 400 Bad Request | ✅ Pass |
 
+> **Observação:** Os campos obrigatórios são name, artist, date, venue e country. 
+> O campo country deve estar no formato ISO 3166-1 alpha-2 (ex: BR, US, KR).
 ---
 
 ## GET /api/v1/events
 | ID | Cenário | Passos | Resultado Esperado | Status |
 |---|---|---|---|---|
-| TC-015 | Listar eventos com sucesso | GET com token válido | 200 + lista de eventos | 🔲 A executar |
-| TC-016 | Listar eventos sem autenticação | GET sem token | 401 Unauthorized | 🔲 A executar |
+| TC-015 | Listar eventos com sucesso | GET com token válido | 200 + lista de eventos | ✅ Pass  |
+| TC-016 | Listar eventos sem autenticação | GET sem token | 401 Unauthorized | ✅ Pass  |
